@@ -51,12 +51,55 @@ namespace Eszter_2020._08._27
             int[] tomb1 = new int[hossz];
             //Feltöltjük  a tömböt - 1-100 közé esú véletlen számokkal
             Random veletlen = new Random();//Inicializáltuk a Random osztály
-            for (int i = 0;i<hossz;i++)
+            for (int i = 0; i < hossz; i++)
             {
                 tomb1[i] = veletlen.Next(1, 101);
             }
 
             //-Feltöltés után a tömb elemeit a program írja ki a képernyőre!
+            for (int i = 0; i < tomb1.Length; i++)
+            {
+                Console.Write($"{tomb1[i]} ");
+            }
+
+            int szamlalo = 0;
+            while (szamlalo < hossz)
+            {
+                Console.Write($"{tomb1[szamlalo]} ");
+                szamlalo++;
+            }
+            Console.WriteLine();
+            //-Döntse el a program, hogy a tömb tartalmaz-e páros elemet! (eldöntés tétele)
+            int eredmeny1 = 0;
+            for (int i = 0; i < tomb1.Length; i++)
+            {
+                if (tomb1[i] % 2 == 0)
+                {
+                    eredmeny1++;
+                    break;
+                }
+            }
+            if (eredmeny1 > 0)
+            {
+                Console.Write("A tömb tartalmaz páros elemet.");
+            }
+            else
+            {
+                Console.Write("A tömb nem tartalmaz páros elemet.");
+            }
+            Console.WriteLine();
+            //Hátultesztelős ciklussal oldjuk meg!!!
+            int szamlalo2 = 0;
+            bool ertek = false;
+            do
+            {
+                
+                if (tomb1[szamlalo2] % 2 == 0)
+                {
+                    ertek = true;
+                }
+                szamlalo2++;
+            } while ((szamlalo2 < hossz) && ertek);
             Console.ReadKey();
         }
     }
