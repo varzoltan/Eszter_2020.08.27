@@ -70,16 +70,18 @@ namespace Eszter_2020._08._27
             }
             Console.WriteLine();
             //-Döntse el a program, hogy a tömb tartalmaz-e páros elemet! (eldöntés tétele)
-            int eredmeny1 = 0;
+            //int eredmeny1 = 0;
+            bool eredmeny3 = false;
             for (int i = 0; i < tomb1.Length; i++)
             {
                 if (tomb1[i] % 2 == 0)
                 {
-                    eredmeny1++;
+                    //eredmeny1++;
+                    eredmeny3 = true;
                     break;
                 }
             }
-            if (eredmeny1 > 0)
+            if (true)
             {
                 Console.Write("A tömb tartalmaz páros elemet.");
             }
@@ -100,6 +102,16 @@ namespace Eszter_2020._08._27
                 }
                 szamlalo2++;
             } while ((szamlalo2 < hossz) && ertek);
+            if (true)
+            {
+                Console.Write("A tömb tartalmaz páros elemet.");
+            }
+            else
+            {
+                Console.Write("A tömb nem tartalmaz páros elemet.");
+            }
+            
+            //-Határozza meg az első páros szám sorszámát!(kiválasztás tétele)
             Console.ReadKey();
         }
     }
