@@ -110,8 +110,26 @@ namespace Eszter_2020._08._27
             {
                 Console.Write("A tömb nem tartalmaz páros elemet.");
             }
-            
+
             //-Határozza meg az első páros szám sorszámát!(kiválasztás tétele)
+            int j = 0;
+            while (tomb1[j] % 2 != 0)
+            {
+                j++;
+            }
+            Console.WriteLine($"A tömbben az első páros elem sorszáma: {j+1}");
+            //Számlálós ciklussal
+            int p = 0;
+            for (int i = 0;i<tomb1.Length;i++)
+            {
+                if (tomb1[i] % 2 == 0)
+                {
+                    //Console.WriteLine($"A tömbben az első páros elem sorszáma: {i + 1}");
+                    p = i + 1;
+                    //break;
+                }
+            }
+            Console.WriteLine($"A tömbben az első páros elem sorszáma: {p}");
             Console.ReadKey();
         }
     }
